@@ -12,7 +12,7 @@ export default defineComponent({
   name: "HomeView",
   data() {
     return {
-      weddingTimeDate: "Jul 25, 2023 15:00:00",
+      weddingTimeDate: "Jul 19, 2023 14:00:00",
     };
   },
   components: {
