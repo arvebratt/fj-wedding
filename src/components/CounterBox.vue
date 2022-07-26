@@ -24,6 +24,7 @@ export default defineComponent({
   },
   methods: {
     numberToString(value: number) {
+      if (value === 0) return "00";
       return value < 10 ? `0${value.toString()}` : value.toString();
     },
   },
