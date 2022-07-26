@@ -33,6 +33,6 @@ export default defineComponent({
 <style scoped>
 div {
   color: var(--color-text-light);
-  font-size: 6rem;
+  font-size: 20px;
 }
 </style>
