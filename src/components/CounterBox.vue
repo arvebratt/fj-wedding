@@ -19,7 +19,7 @@ export default defineComponent({
   },
   computed: {
     displayValue() {
-      return this.currentValue ? this.numberToString(this.currentValue) : "";
+      return this.numberToString(this.currentValue ? this.currentValue : 0);
     },
   },
   methods: {
