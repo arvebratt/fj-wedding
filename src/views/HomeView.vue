@@ -1,18 +1,22 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-  </div>
+  <body>
+    <CountDown :wedding-time-date="weddingTimeDate" />
+  </body>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import CountDown from "@/components/CountDown.vue";
 
 export default defineComponent({
   name: "HomeView",
+  data() {
+    return {
+      weddingTimeDate: "Jul 25, 2023 15:00:00",
+    };
+  },
   components: {
-    HelloWorld,
+    CountDown,
   },
 });
 </script>

@@ -1,0 +1,32 @@
+:root {
+  --color-background: black;
+  --color-text-light: #ffffff;
+  --color-dark: black;
+  --color-red: #df3e52;
+  --color-pink: #ff00c7;
+  --color-lightpink: #ff90e7;
+  --color-darkblue: #0e012f;
+  --color-lightsmoke: #f5f5f5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-dark);
+  background: var(--color-light);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: "Inconsolata", monospace;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
