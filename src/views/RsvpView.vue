@@ -26,7 +26,7 @@
       <span>{{ option }}</span>
       <input
         type="radio"
-        name="option"
+        name="food-preference"
         @input="(ev) => form['food-preference'] === handleOption(ev)"
         :value="option"
         :checked="form['food-preference'] === option"
