@@ -27,7 +27,7 @@
       <input
         type="radio"
         name="food-preference"
-        @input="(ev) => form['food-preference'] === handleOption(ev)"
+        v-model="form['food-preference']"
         :value="option"
         :checked="form['food-preference'] === option"
       />
@@ -86,6 +86,12 @@ export default defineComponent({
       const axiosConfig = {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
       };
+      console.log(
+        this.encode({
+          "form-name": "rsvp",
+          ...this.form,
+        })
+      );
       axios
         .post(
           "/",
