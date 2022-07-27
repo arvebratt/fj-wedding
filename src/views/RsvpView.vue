@@ -13,10 +13,11 @@
     /></label>
     <label
       >First name:
-      <input type="name" name="first-name" v-model="form.firstName"
+      <input type="name" name="first-name" v-model="form['first-name']"
     /></label>
     <label
-      >Last name: <input type="name" name="last-name" v-model="form.lastName"
+      >Last name:
+      <input type="name" name="last-name" v-model="form['last-name']"
     /></label>
     <label
       >Your Email: <input type="email" name="email" v-model="form.email"
@@ -26,9 +27,9 @@
       <input
         type="radio"
         name="option"
-        @input="(ev) => form.foodPreference === handleOption(ev)"
+        @input="(ev) => form['food-preference'] === handleOption(ev)"
         :value="option"
-        :checked="form.foodPreference === option"
+        :checked="form['food-preference'] === option"
       />
     </label>
     <button type="submit" class="submit-button">Submit</button>
@@ -41,10 +42,10 @@ import axios from "axios";
 
 interface Iform {
   code: string;
-  firstName: string;
-  lastName: string;
+  "first-name": string;
+  "last-name": string;
   email: string;
-  foodPreference: string;
+  "food-preference": string;
 }
 
 interface Ipayload extends Iform {
@@ -57,10 +58,10 @@ export default defineComponent({
     return {
       form: {
         code: "",
-        firstName: "",
-        lastName: "",
+        "first-name": "",
+        "last-name": "",
         email: "",
-        foodPreference: "",
+        "food-preference": "",
       } as Iform,
       foodOptions: ["chicken", "fish", "vegetarian"],
     };
