@@ -1,5 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import HomeView from "@/views/HomeView.vue";
+import RsvpView from "@/views/RsvpView.vue";
+import SubmissionSuccess from "@/components/submission/SubmissionSuccess.vue";
+import SubmissionFail from "@/components/submission/SubmissionFail.vue";
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -12,10 +15,17 @@ const router = createRouter({
     {
       path: "/rsvp",
       name: "rsvp",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import("@/views/RsvpView.vue"),
+      component: RsvpView,
+    },
+    {
+      path: "/thanks",
+      name: "success",
+      component: SubmissionSuccess,
+    },
+    {
+      path: "/404",
+      name: "fail",
+      component: SubmissionFail,
     },
   ],
 });
