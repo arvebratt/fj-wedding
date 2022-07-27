@@ -1,6 +1,12 @@
 <template>
   <body>
-    <form name="rsvp" method="POST" data-netlify="true">
+    <form
+      name="rsvp"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="ask-question" />
       <p>
         <label>Personal code: <input type="text" name="code" /></label>
       </p>
