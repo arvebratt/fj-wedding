@@ -1,10 +1,13 @@
 <template>
-  <header>
+  <div>
     <ul>
-      <li><RouterLink to="/rsvp">RSVP</RouterLink></li>
       <li><RouterLink to="/">Wedding day info</RouterLink></li>
+      <li><RouterLink to="/">Photos</RouterLink></li>
+      <li><RouterLink to="/">Registry</RouterLink></li>
+      <li><RouterLink to="/">Music requests</RouterLink></li>
     </ul>
-  </header>
+    <button @click="$router.push('rsvp')">RSVP</button>
+  </div>
 </template>
 
 <script lang="ts">
@@ -16,9 +19,13 @@ export default defineComponent({
 </script>
 
 <style scoped>
-header {
+div {
   z-index: 999;
-  margin-top: 10px;
+  width: 100vw;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
 ul {
@@ -26,13 +33,14 @@ ul {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 5vw;
+  gap: 1vw;
   list-style-type: none;
 }
 
 a {
-  color: var(--color-text-dark);
+  color: var(--baby-blue);
   text-decoration: none;
-  font-size: large;
+  font-size: 1rem;
+  font-weight: 900;
 }
 </style>

@@ -4,6 +4,15 @@
   --color-text-light: #fbf9db;
   --color-accent-royale-blue: #234e70;
   --color-accent-pale-yellow: #fbf8be;
+
+  --msu-green: #284c45ff;
+  --polished-pine: #6d998cff;
+  --hookers-green-2: #406a5fff;
+
+  --baby-blue: #ebfdf9;
+  --sand-dune: #f3eada;
+  --hookers-green: #47756bff;
+  --dark-jungle-green: 13, 26, 24;
 }
 
 *,
@@ -20,7 +29,7 @@ body {
   color: var(--color-text-dark);
   background: var(--color-background-default);
   transition: color 0.5s, background-color 0.5s;
-  font-family: "Inconsolata", monospace;
+  font-family: "Roboto", sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

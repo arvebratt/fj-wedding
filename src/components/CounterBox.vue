@@ -1,5 +1,5 @@
 <template>
-  <div>{{ displayValue }}</div>
+  <h3>{{ displayValue }}</h3>
 </template>
 
 <script lang="ts">
@@ -30,9 +30,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped>
-div {
-  font-size: 20px;
-}
-</style>
