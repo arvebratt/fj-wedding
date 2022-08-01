@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper">
-    <img src="/fj-logo.svg" alt="Fredrik and Josefine logo" />
     <div class="counter-container">
       <CounterBox :max-value="365" :current-value="days" />
       <CounterBox :max-value="24" :current-value="hours" />

@@ -1,9 +1,6 @@
 <template>
   <NavigationBar />
-  <div
-    class="background-image"
-    style="--url-path: url(/green-silk-background.jpeg)"
-  >
+  <div class="background-image" style="--url-path: url(/fj-background.png)">
     <div class="grid">
       <DisplayLanding />
       <DisplayCountDown :wedding-time-date="weddingTimeDate" />

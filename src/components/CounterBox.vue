@@ -30,3 +30,9 @@ export default defineComponent({
   },
 });
 </script>
+<style scoped>
+h3 {
+  font-family: "Anonymous Pro", monospace;
+  color: var(--color-primary-900);
+}
+</style>

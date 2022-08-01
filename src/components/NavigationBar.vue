@@ -6,15 +6,25 @@
       <li><RouterLink to="/">Registry</RouterLink></li>
       <li><RouterLink to="/">Music requests</RouterLink></li>
     </ul>
-    <button @click="$router.push('rsvp')">RSVP</button>
+    <button id="show-modal" @click="showModal = true">RSVP</button>
   </div>
+  <Teleport to="body">
+    <RsvpModal :show="showModal" @close="showModal = false" />
+  </Teleport>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import RsvpModal from "@/components/modal/RsvpModal.vue";
 
 export default defineComponent({
   name: "NavigationBar",
+  components: { RsvpModal },
+  data() {
+    return {
+      showModal: false,
+    };
+  },
 });
 </script>
 
@@ -35,12 +45,5 @@ ul {
   align-items: center;
   gap: 1vw;
   list-style-type: none;
-}
-
-a {
-  color: var(--baby-blue);
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 900;
 }
 </style>

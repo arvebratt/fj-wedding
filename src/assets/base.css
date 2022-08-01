@@ -1,18 +1,46 @@
 :root {
-  --color-background-default: #fbf8f5;
-  --color-text-dark: #142c3f;
-  --color-text-light: #fbf9db;
-  --color-accent-royale-blue: #234e70;
-  --color-accent-pale-yellow: #fbf8be;
+  /* base colors */
+  --color-logan: 182, 167, 202;
+  --color-san-marino: 70, 124, 165;
+  --color-copper-rose: 143, 97, 112;
+  --color-new-york-pink: 211, 119, 118;
 
-  --msu-green: #284c45ff;
-  --polished-pine: #6d998cff;
-  --hookers-green-2: #406a5fff;
+  /* text colors */
+  --color-pale-yellow: 255, 250, 222;
+  --color-pale-lavender: 254, 246, 255;
 
-  --baby-blue: #ebfdf9;
-  --sand-dune: #f3eada;
-  --hookers-green: #47756bff;
-  --dark-jungle-green: 13, 26, 24;
+  --color-primary-900: #47294c;
+  --color-primary-800: #603260;
+  --color-primary-700: #6f376b;
+  --color-primary-600: #7d3e74;
+  --color-primary-500: #88447a;
+  --color-primary-400: #9a588c;
+  --color-primary-300: #ac729f;
+  --color-primary-200: #c598bb;
+  --color-primary-100: #dbc0d5;
+  --color-primary-50: #f0e6ee;
+
+  --color-secondary-red-900: #4c292e;
+  --color-secondary-red-800: #5d363a;
+  --color-secondary-red-700: #6d4243;
+  --color-secondary-red-600: #7f4e4e;
+  --color-secondary-red-500: #8c5756;
+  --color-secondary-red-400: #9f706f;
+  --color-secondary-red-300: #b28a88;
+  --color-secondary-red-200: #cbabaa;
+  --color-secondary-red-100: #e5cbca;
+  --color-secondary-red-50: #fbe9e6;
+
+  --color-secondary-sand-900: #292506;
+  --color-secondary-sand-800: #4c4729;
+  --color-secondary-sand-700: #6c6647;
+  --color-secondary-sand-600: #817a5a;
+  --color-secondary-sand-500: #aba482;
+  --color-secondary-sand-400: #cac29f;
+  --color-secondary-sand-300: #ede5c1;
+  --color-secondary-sand-200: #faf1cd;
+  --color-secondary-sand-100: #fff6d2;
+  --color-secondary-sand-50: #fffbd6;
 }
 
 *,
@@ -26,11 +54,11 @@
 
 body {
   min-height: 100vh;
-  color: var(--color-text-dark);
-  background: var(--color-background-default);
+  min-width: 100vw;
+  color: rgb(var(--color-pale-yellow));
+  background: rgb(var(--color-logan));
   transition: color 0.5s, background-color 0.5s;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -1,0 +1,162 @@
+.input-field {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.input-field > input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid var(--color-secondary-red-900);
+}
+.input-field > input:focus {
+  outline: none;
+}
+
+.input-field > label {
+  color: var(--color-secondary-red-900);
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+/* active state */
+.input-field > input:focus ~ label,
+.input-field > input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: var(--color-secondary-red-700);
+}
+/* BOTTOM BARS ================================= */
+.input-field > .bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+.input-field > .bar:before,
+.input-field > .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: var(--color-secondary-red-700);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.input-field > .bar:before {
+  left: 50%;
+}
+.input-field > .bar:after {
+  right: 50%;
+}
+
+/* active state */
+.input-field > input:focus ~ .bar:before,
+.input-field > input:focus ~ .bar:after {
+  width: 50%;
+}
+/* HIGHLIGHTER ================================== */
+.input-field > .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+.input-field > input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: var(--color-secondary-red-700);
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: var(--color-secondary-red-700);
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: var(--color-secondary-red-700);
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.radio-label {
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: var(--color-secondary-red-900);
+}
+
+.radio-label span {
+  position: relative;
+  line-height: 24px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.radio-label span:before,
+.radio-label span:after {
+  content: "";
+}
+
+.radio-label span:before {
+  border: 1px solid var(--color-secondary-red-900);
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 2px;
+}
+
+.radio-label span:after {
+  background: var(--color-secondary-red-900);
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  transition: 300ms;
+  opacity: 0;
+}
+
+.radio-label input:checked + span:after {
+  opacity: 1;
+}
