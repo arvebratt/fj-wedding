@@ -75,7 +75,10 @@
         <span>{{ foodOptions[2] }}</span>
       </label>
     </div>
-    <button type="submit" class="submit-button">Submit</button>
+    <div class="button-wrapper">
+      <button type="button" @click="$emit('close')">Close</button>
+      <button type="submit">Submit</button>
+    </div>
   </form>
 </template>
 
@@ -144,6 +147,7 @@ export default defineComponent({
           axiosConfig
         )
         .then(() => {
+          this.$emit("close");
           this.toast.success("Thank you, message sent!");
         })
         .catch(() => {
@@ -162,11 +166,16 @@ export default defineComponent({
   align-items: center;
   gap: 10px;
 }
-
 .radio-wrapper {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: left;
+}
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 1vw;
 }
 </style>

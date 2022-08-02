@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <Transition name="modal">
     <div v-if="show" class="modal-mask">
@@ -7,18 +6,8 @@
           <div class="modal-header">
             <h3>RSVP to the wedding</h3>
           </div>
-
-          <div class="modal-body">
-            <RsvpContent />
-          </div>
-
-          <div class="modal-footer">
-            <slot name="footer">
-              default footer
-              <button class="modal-default-button" @click="$emit('close')">
-                OK
-              </button>
-            </slot>
+          <div class="modal-content">
+            <RsvpContent @close="$emit('close')" />
           </div>
         </div>
       </div>
@@ -68,18 +57,14 @@ export default defineComponent({
   transition: all 0.3s ease;
 }
 
+.modal-content {
+  margin-top: 20px;
+}
+
 .modal-header h3 {
   margin-top: 0;
   color: var(--color-secondary-red-900);
   font-family: "Playfair Display", serif;
-}
-
-.modal-body {
-  margin: 20px 0;
-}
-
-.modal-default-button {
-  float: right;
 }
 
 .modal-enter-from {
