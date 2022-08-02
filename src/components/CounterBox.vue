@@ -33,6 +33,6 @@ export default defineComponent({
 <style scoped>
 h3 {
   font-family: "Anonymous Pro", monospace;
-  color: var(--color-primary-900);
+  color: var(--color-secondary-red-700);
 }
 </style>

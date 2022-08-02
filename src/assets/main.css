@@ -1,6 +1,7 @@
 @import "./base.css";
 @import "./input.css";
 @import "./button.css";
+@import "./toasts.css";
 
 #app {
   /* max-width: 1280px; */
@@ -14,12 +15,12 @@
   height: 100vh;
   left: 0;
   top: 0;
-  background: var(--color-background-default);
+  background: var(--color-secondary-sand-50);
 }
 
 h1 {
   font-size: 4rem;
-  color: var(--color-secondary-red-100);
+  color: var(--color-secondary-red-600);
   position: relative;
   display: inline-block;
   text-transform: uppercase;
@@ -28,14 +29,14 @@ h1 {
 h3 {
   font-size: 3rem;
   font-weight: 900;
-  color: rgb(var(--color-pale-yellow));
+  color: var(--color-secondary-red-600);
   position: relative;
   display: inline-block;
   text-transform: uppercase;
 }
 h6 {
   font-size: 2rem;
-  color: var(--color-secondary-sand-200);
+  color: var(--color-secondary-red-600);
   position: relative;
   display: inline-block;
   text-transform: lowercase;
@@ -52,25 +53,4 @@ h6 {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-button {
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
-  font-weight: 500;
-  border: 1px solid transparent;
-  border-radius: 2px;
-  height: 36px;
-  line-height: 34px;
-  font-size: 14px;
-  color: rgb(var(--color-pale-yellow));
-  background-color: rgba(var(--color-copper-rose), 0.8);
-  transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
-  padding: 0 18px;
-}
-
-button:hover {
-  color: rgb(var(--color-pale-yellow));
-  background-color: rgb(var(--color-copper-rose));
 }

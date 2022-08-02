@@ -82,6 +82,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import axios from "axios";
+import { useToast } from "vue-toastification";
 
 interface Iform {
   code: string;
@@ -108,6 +109,10 @@ export default defineComponent({
       } as Iform,
       foodOptions: ["chicken", "fish", "vegetarian"],
     };
+  },
+  setup() {
+    const toast = useToast();
+    return { toast };
   },
   methods: {
     handleOption(event: Event) {
@@ -139,10 +144,10 @@ export default defineComponent({
           axiosConfig
         )
         .then(() => {
-          this.$router.push("thanks");
+          this.toast.success("Thank you, message sent!");
         })
         .catch(() => {
-          this.$router.push("404");
+          this.toast.error("Ops, failed to send message...");
         });
     },
   },

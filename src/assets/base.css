@@ -1,14 +1,4 @@
 :root {
-  /* base colors */
-  --color-logan: 182, 167, 202;
-  --color-san-marino: 70, 124, 165;
-  --color-copper-rose: 143, 97, 112;
-  --color-new-york-pink: 211, 119, 118;
-
-  /* text colors */
-  --color-pale-yellow: 255, 250, 222;
-  --color-pale-lavender: 254, 246, 255;
-
   --color-primary-900: #47294c;
   --color-primary-800: #603260;
   --color-primary-700: #6f376b;

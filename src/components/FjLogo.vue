@@ -44,8 +44,8 @@ export default {
 
 <style scoped>
 svg {
-  fill: var(--color-primary-900);
+  fill: var(--color-secondary-sand-100);
   max-width: 500px;
-  width: 25vw;
+  width: 3rem;
 }
 </style>

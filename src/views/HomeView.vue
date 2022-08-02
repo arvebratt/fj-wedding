@@ -1,9 +1,8 @@
 <template>
   <NavigationBar />
-  <div class="background-image" style="--url-path: url(/fj-background.png)">
-    <div class="grid">
+  <div class="background-image" :style="backgroundImage">
+    <div class="content">
       <DisplayLanding />
-      <DisplayCountDown :wedding-time-date="weddingTimeDate" />
     </div>
   </div>
 </template>
@@ -11,7 +10,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import NavigationBar from "@/components/NavigationBar.vue";
-import DisplayCountDown from "@/components/DisplayCountDown.vue";
 import DisplayLanding from "@/components/DisplayLanding.vue";
 
 export default defineComponent({
@@ -22,18 +20,34 @@ export default defineComponent({
     };
   },
   components: {
-    DisplayCountDown,
     NavigationBar,
     DisplayLanding,
+  },
+  computed: {
+    backgroundImage() {
+      const w = window.innerWidth;
+      if (w > 400) {
+        return {
+          "--url-path": "url(/large-background.png)",
+        };
+      }
+      return {
+        "--url-path": "url(/small-background.png)",
+      };
+    },
   },
 });
 </script>
 
 <style scoped>
-.grid {
-  width: 100vw;
-  display: grid;
-  grid-auto-columns: minmax(0, 1fr);
-  grid-auto-flow: column;
+.content {
+  width: 50vw;
+  height: 100vh;
+}
+
+@media (max-width: 400px) {
+  .content {
+    width: 100vw;
+  }
 }
 </style>
