@@ -1,9 +1,9 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import ProtectedView from "@/views/ProtectedView.vue";
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes: [
     {
       path: "/protected",
@@ -21,8 +21,8 @@ const router = createRouter({
   ],
 });
 
-router.beforeEach((to) => {
-  if (to.meta.requiresAuth && localStorage.pass !== "123") {
+router.beforeEach((to, from) => {
+  if (to.meta.requiresAuth && localStorage.pass !== "bröllop") {
     return { name: "protected" };
   }
 });

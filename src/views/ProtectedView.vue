@@ -33,8 +33,9 @@ export default defineComponent({
   components: { DisplayCountDown },
   methods: {
     validateBeforeSubmit() {
-      if (this.password === "fjbröllop") {
+      if (this.password === "bröllop") {
         this.error = false;
+        console.log(this.password);
         localStorage.pass = this.password;
         router.push("/");
       } else {
