@@ -28,11 +28,11 @@ export default defineComponent({
       const w = window.innerWidth;
       if (w > 400) {
         return {
-          "--url-path": "url(/large-background.png)",
+          "--url-path": "url(/large-background.jpg)",
         };
       }
       return {
-        "--url-path": "url(/small-background.png)",
+        "--url-path": "url(/small-background.jpg)",
       };
     },
   },

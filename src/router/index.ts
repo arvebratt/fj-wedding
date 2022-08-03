@@ -21,7 +21,7 @@ const router = createRouter({
   ],
 });
 
-router.beforeEach((to, from) => {
+router.beforeEach((to) => {
   if (to.meta.requiresAuth && localStorage.pass !== "bröllop") {
     return { name: "protected" };
   }
