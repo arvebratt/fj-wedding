@@ -80,4 +80,13 @@ export default defineComponent({
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+@media screen and (max-width: 768px) {
+  .modal-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 </style>

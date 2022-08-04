@@ -178,4 +178,11 @@ export default defineComponent({
   justify-content: right;
   gap: 1vw;
 }
+@media screen and (max-width: 768px) {
+  .name-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
 </style>
