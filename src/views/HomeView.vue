@@ -26,7 +26,7 @@ export default defineComponent({
   computed: {
     backgroundImage() {
       const w = window.innerWidth;
-      if (w > 400) {
+      if (w > 768) {
         return {
           "--url-path": "url(/large-background.jpg)",
         };
@@ -45,7 +45,7 @@ export default defineComponent({
   height: 100vh;
 }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 768px) {
   .content {
     width: 100vw;
   }

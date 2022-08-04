@@ -47,7 +47,7 @@ h1 {
   align-items: center;
   gap: 2vw;
 }
-@media (max-width: 400px) {
+@media screen and (max-width: 768px) {
   .title {
     gap: 0;
     flex-direction: column;

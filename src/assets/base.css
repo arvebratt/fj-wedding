@@ -31,6 +31,8 @@
   --color-secondary-sand-200: #faf1cd;
   --color-secondary-sand-100: #fff6d2;
   --color-secondary-sand-50: #fffbd6;
+
+  --z-index-navigation: 999;
 }
 
 *,

@@ -98,7 +98,7 @@ export default defineComponent({
   align-items: center;
   gap: 5px;
 }
-@media (max-width: 400px) {
+@media screen and (max-width: 768px) {
   .form-wrapper {
     flex-direction: column;
   }
