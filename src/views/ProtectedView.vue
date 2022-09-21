@@ -3,14 +3,29 @@
     <div class="flex-wrapper">
       <DisplayCountDown :wedding-time-date="weddingTimeDate" />
       <form class="form-wrapper" v-on:submit.prevent="validateBeforeSubmit">
-        <transition name="shake">
-          <input
-            :class="{ inputPassword: true, inputWrong: error }"
-            type="password"
-            name="password"
-            v-model.trim="password"
-          />
-        </transition>
+        <div class="inputs-form-wrapper">
+          <div class="input-wrapper">
+            <label for="username">Username</label>
+            <input
+              class="inputBox"
+              name="username"
+              v-model.trim="user"
+              id="username"
+            />
+          </div>
+          <transition name="shake">
+            <div class="input-wrapper">
+              <label for="password">Password</label>
+              <input
+                :class="{ inputBox: true, inputWrong: error }"
+                type="password"
+                name="password"
+                v-model.trim="password"
+                id="password"
+              />
+            </div>
+          </transition>
+        </div>
         <button class="btn btn-primary" type="submit">Enter</button>
       </form>
     </div>
@@ -26,6 +41,7 @@ export default defineComponent({
   data() {
     return {
       error: false,
+      user: null,
       password: null,
       weddingTimeDate: "Jul 19, 2023 14:00:00",
     };
@@ -33,7 +49,7 @@ export default defineComponent({
   components: { DisplayCountDown },
   methods: {
     validateBeforeSubmit() {
-      if (this.password === "bröllop") {
+      if (this.password === "bröllop" && this.user === "arve") {
         this.error = false;
         console.log(this.password);
         localStorage.pass = this.password;
@@ -94,16 +110,29 @@ export default defineComponent({
 }
 .form-wrapper {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.inputs-form-wrapper {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 5px;
 }
 @media screen and (max-width: 768px) {
-  .form-wrapper {
+  .inputs-form-wrapper {
     flex-direction: column;
   }
 }
-.inputPassword {
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+.inputBox {
   font-size: 1.5rem;
   height: 36px;
   max-width: 230px;

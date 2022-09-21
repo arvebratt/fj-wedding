@@ -14,6 +14,9 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 /* add icons to the library */
 library.add(faBars, faXmark);
 
+/* Importing query library */
+import { VueQueryPlugin } from "vue-query";
+
 import "./assets/main.css";
 
 const options: PluginOptions = {
@@ -24,5 +27,6 @@ const options: PluginOptions = {
 createApp(App)
   .use(router)
   .use(Toast, options)
+  .use(VueQueryPlugin)
   .component("font-awesome-icon", FontAwesomeIcon)
   .mount("#app");

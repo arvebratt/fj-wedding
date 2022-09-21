@@ -29,7 +29,7 @@
         <li><RouterLink class="menu-item" to="/">Photos</RouterLink></li>
         <li><RouterLink class="menu-item" to="/">Registry</RouterLink></li>
         <li>
-          <RouterLink class="menu-item" to="/">Music requests</RouterLink>
+          <RouterLink class="menu-item" to="/music">Music requests</RouterLink>
         </li>
       </ul>
       <button class="menu-item" @click="showModal = true">RSVP</button>
